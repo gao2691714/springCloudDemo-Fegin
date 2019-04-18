@@ -1,0 +1,18 @@
+eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: clientName2
+    prefer-ip-address: true
+spring:
+  application:
+    name: eurekaClient_fegin
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG_SERVICE
+      profile: dev
+server:
+  port: 8763
